@@ -14,18 +14,18 @@
 /* Driver hardware support.                                                  */
 /*===========================================================================*/
 
-#define GDISP_HARDWARE_DRAWPIXEL		GFXON
-#define GDISP_HARDWARE_PIXELREAD		GFXON
-#define GDISP_HARDWARE_CONTROL			GFXON
+#define GDISP_HARDWARE_DRAWPIXEL GFXON
+#define GDISP_HARDWARE_PIXELREAD GFXON
+#define GDISP_HARDWARE_CONTROL GFXON
 
 // Any other support comes from the board file
-#include "board_fb24bpp.h"
+#include "board_Fb24bpp.h"
 
 // This driver supports a packed 24bit per pixel framebuffer
 #ifndef GDISP_LLD_PIXELFORMAT
-	#error "GDISP Fb24bpp: You must specify a GDISP_LLD_PIXELFORMAT in your board_fb24bpp.h or your makefile"
+#error "GDISP Fb24bpp: You must specify a GDISP_LLD_PIXELFORMAT in your board_fb24bpp.h or your makefile"
 #endif
 
-#endif	/* GFX_USE_GDISP */
+#endif /* GFX_USE_GDISP */
 
-#endif	/* _GDISP_LLD_CONFIG_H */
+#endif /* _GDISP_LLD_CONFIG_H */
